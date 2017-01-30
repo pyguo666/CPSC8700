@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <constant name="struts.devMode" value="true"></constant>
+    <package name="default" extends="struts-default">
+        <action name="login" class="com.yang.LoginAction" >
+            <result name="adminPage" type="redirect">loadMenu.action</result>
+            <result name="success" type="redirect">loadUserDash.action</result>
+            <result name="error">index.jsp</result>
+        </action>
+        <action name="logout" class="com.yang.LogoutAction" >
+            <result name="success">index.jsp</result>
+        </action>
+        <action name="signup" class="com.yang.User.SignupAction" >
+            <result name="success">signupSuccess.jsp</result>
+            <result name="error">signupError.jsp</result>
+        </action>
+
+        <action name="loadUserDash" class="com.yang.User.loadDashUser">
+            <result>userDash.jsp</result>
+        </action>
+        <action name="loadUser" class="com.yang.User.loadUserAction">
+            <result>userManage.jsp</result>
+        </action>
+        <action name="userDelete" class="com.yang.User.userDelete">
+            <result name="success">userSuccess.jsp</result>
+            <result name="error">userError.jsp</result>
+        </action>
+        <action name="changeAndDelete" class="com.yang.User.changeRecAndDlete">
+            <result type="redirect">loadUserDash.action</result>
+        </action>
+        <action name="loadMenu" class="com.yang.Admin.loadMenuAction">
+            <result>adminDash.jsp</result>
+        </action>
+        <action name="adminAdd" class="com.yang.Admin.AdminAdd">
+            <result name="success">adminSuccess.jsp</result>
+            <result name="error">adminError.jsp</result>
+        </action>
+        <action name="adminDelete" class="com.yang.Admin.AdminDelete">
+            <result name="success">adminSuccess.jsp</result>
+            <result name="error">adminError.jsp</result>
+        </action>
+        <action name="adminUpdate" class="com.yang.Admin.AdminUpdate">
+            <result name="success">adminSuccess.jsp</result>
+            <result name="error">adminError.jsp</result>
+        </action>
+    </package>
+</struts>
