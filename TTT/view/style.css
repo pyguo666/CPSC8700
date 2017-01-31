@@ -1,0 +1,92 @@
+body{
+	background-color: #EFEFEF;
+	font-family:sans-serif;
+	color: #00264d;
+	width: 100%;
+}
+
+h1{
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+div{
+	padding-bottom: 10px;
+}
+
+.center{
+	margin-left: auto; 
+	margin-right: auto; 
+	display: block;
+	width: 88%;
+}
+
+.hide{
+	display: block;
+}
+
+.navButton{
+	display: block;
+	height: 60px;
+	margin-bottom: 15px;
+	background-color: #99CCFF;
+	border: 2px solid #001a33;
+	border-radius: 10px;
+	font-size: 24px;
+}
+
+h2,
+h3{
+	display:inline-block;
+}
+
+
+.pos {
+	width: 150px;
+	height: 150px;
+	font-size:60px;
+	text-align:center;
+}
+.col {
+	display:inline-block;
+	vertical-align: top; /*goes well with inline-blocks*/
+	margin: -2px;
+}
+.col2 {
+	border-right: 2px black solid;
+	border-left: 2px black solid;
+}
+.row2 {
+	border-top: 2px black solid;
+	border-bottom: 2px black solid;
+}
+
+
+#addplayer1{
+	background-color: white;
+	padding: 25px 0px;
+}
+#addplayer2{
+	background-color: white;
+	padding: 25px 0px;
+}
+
+#board {
+	margin-top:300px;
+}
+#reset {
+	border-radius: 15px;
+	margin-top: 20px;
+	width: 150px;
+	padding: 10px;
+	font-size: 18px;
+	background-color: #99CCFF;
+}
+#infoBlock1 {
+	float:left;
+	width: 50%;
+}
+#infoBlock2 {
+	float:right;
+	width: 50%;
+}

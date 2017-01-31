@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <title>Tic Tac Toe</title>
+    <script src="view/tictactoe.js"></script>
+    <link rel="stylesheet" href="view/style.css">
+  </head>
+  <body>
+    <h1 align="center">Tic Tac Toe</h1>
+
+    <div id="infoBlock1">
+      <button type="button" class="navButton center" onclick="toggleDisplay('player1')">Player1 Info</button>
+      <div class="center hide" id="player1">
+        <div class="center">
+          <label for="name">Name : </label>
+          <input id="name"></input> <br>
+        </div>
+        <div class="center">
+          <label for="marker">Marker: </label>
+          <input id="marker"></input> <br>
+        </div>
+        <button class="center" type="button" onclick="createPlayer(1)">Create Player</button>
+      </div>
+    </div>
+    <div id="infoBlock2">
+      <button type="button" class="navButton center" onclick="toggleDisplay('player2')">Player2 Info</button>
+      <div class="center hide" id="player2">
+        <div class="center">
+          <label for="name2">Name : </label>
+          <input id="name2"></input> <br>
+        </div>
+        <div class="center">
+          <label for="marker2">Marker: </label>
+          <input id="marker2"></input> <br>
+        </div>
+        <button class="center" type="button" onclick="createPlayer(2)">Create Player</button>
+      </div>
+    </div>
+
+    <div id = "board" align="center">
+      <div class = "col col1">
+        <div id="pos1" class="pos row1"  onclick="setSelection(0,0,playerNum)"></div>
+        <div id="pos2" class="pos row2"  onclick="setSelection(0,1,playerNum)"></div>
+        <div id="pos3" class="pos row3"  onclick="setSelection(0,2,playerNum)"></div>
+      </div>
+      <div class = "col col2">
+        <div id="pos4" class="pos row1"  onclick="setSelection(1,0,playerNum)"></div>
+        <div id="pos5" class="pos row2"  onclick="setSelection(1,1,playerNum)"></div>
+        <div id="pos6" class="pos row3"  onclick="setSelection(1,2,playerNum)"></div>
+      </div>
+      <div class = "col col3">
+        <div id="pos7" class="pos row1"  onclick="setSelection(2,0,playerNum)"></div>
+        <div id="pos8" class="pos row2"  onclick="setSelection(2,1,playerNum)"></div>
+        <div id="pos9" class="pos row3"  onclick="setSelection(2,2,playerNum)"> </div>
+      </div>
+    </div>
+
+    <h1 id="notice" align="center">
+    </h1>
+
+    <button type="button" id="reset" class="center" onclick="startNewgame()">Restart Game</button>
+
+  </body>
+</html>
